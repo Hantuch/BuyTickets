@@ -2,74 +2,14 @@
 <!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkDialog" id="windowcomplete">
-    <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Transaction Complete!</property>
-    <property name="modal">True</property>
-    <property name="default_width">200</property>
-    <property name="default_height">100</property>
-    <property name="type_hint">dialog</property>
-    <child>
-      <placeholder/>
-    </child>
-    <child internal-child="vbox">
-      <object class="GtkBox" id="transccomplete">
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-            <child>
-              <object class="GtkButton" id="button_complete_transaction">
-                <property name="label" translatable="yes">button</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">-1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="label_complete_transaction">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Your Transaction
-Is Complete!!!
-
-Thank You &amp; Have Fun!</property>
-            <property name="justify">center</property>
-            <attributes>
-              <attribute name="scale" value="400"/>
-              <attribute name="size" value="30"/>
-            </attributes>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
-        </child>
-      </object>
-    </child>
-  </object>
   <object class="GtkWindow" id="windowmain">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Buy Tickets!</property>
     <property name="resizable">False</property>
+    <property name="window_position">center</property>
     <property name="default_width">400</property>
     <property name="default_height">560</property>
+    <property name="gravity">center</property>
     <signal name="destroy" handler="on_window_destroy" swapped="no"/>
     <child>
       <placeholder/>
@@ -955,23 +895,6 @@ Proyek Akhir Algoritma &amp; Pemrograman</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="label_summary_seating">
-                    <property name="width_request">30</property>
-                    <property name="height_request">30</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">[Not Yet Finished]</property>
-                    <attributes>
-                      <attribute name="scale" value="350"/>
-                      <attribute name="size" value="30"/>
-                    </attributes>
-                  </object>
-                  <packing>
-                    <property name="x">230</property>
-                    <property name="y">161</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkLabel" id="label_summary_price">
                     <property name="width_request">30</property>
                     <property name="height_request">30</property>
@@ -1055,6 +978,23 @@ to proceed with the transaction, please click 'continue'</property>
                     <property name="y">374</property>
                   </packing>
                 </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary_seating">
+                    <property name="width_request">30</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">[Not Yet Finished]</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">230</property>
+                    <property name="y">161</property>
+                  </packing>
+                </child>
               </object>
               <packing>
                 <property name="position">4</property>
@@ -1083,8 +1023,10 @@ to proceed with the transaction, please click 'continue'</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Seating!</property>
     <property name="modal">True</property>
+    <property name="window_position">center</property>
     <property name="default_width">400</property>
     <property name="default_height">300</property>
+    <property name="gravity">center</property>
     <child>
       <placeholder/>
     </child>
@@ -1177,6 +1119,58 @@ to proceed with the transaction, please click 'continue'</property>
           <packing>
             <property name="x">221</property>
             <property name="y">240</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="windowsuccess">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Success!</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="default_width">200</property>
+    <property name="default_height">120</property>
+    <property name="type_hint">dialog</property>
+    <property name="gravity">center</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="Success">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label_success">
+            <property name="width_request">142</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Transaction Success!!
+Happy Watching</property>
+            <property name="justify">center</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">29</property>
+            <property name="y">15</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_success">
+            <property name="label" translatable="yes">Continue</property>
+            <property name="width_request">84</property>
+            <property name="height_request">34</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_button_success_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">58</property>
+            <property name="y">65</property>
           </packing>
         </child>
       </object>

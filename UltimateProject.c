@@ -22,7 +22,7 @@ struct film
 
 struct seat
 {
-    char position[2];
+    char position[3];
     int status;
 }seat[4];
 
@@ -35,29 +35,31 @@ GtkWidget *window0;
 GtkWidget *window1;
 GtkWidget *window2;
 GtkBuilder *builder;
+GtkToggleButton *toggle_button[4];
 
 GdkPixbuf *create_pixbuf(const gchar * filename);
-int price();
-void intfilmtab();
-void intscheduletab();
-void intsinopsistab();
-void intseatwindow();
-void intsummary();
-void hidetab();
-void showtab();
-void readFilm();
-void readJadwal();
-void readSinopsis();
+int price(); //Calculate the Total Payment Based on Date
+void intfilmtab(); //Initialize The Film Tab
+void intscheduletab(); //Initialize Schedule Tab
+void intsinopsistab(); //Initialize Sinopsis Tab (based on chosen film)
+void intseatwindow(); //Initialize the Seating Layout Window
+void intsummary();//Initialize the Summary Tab based on collected info
+void hidetab(); //Hide a Tab
+void showtab(); //Show a Tab
+void readFilm(); //Read The Films from a File
+void readJadwal(); //Read the Schedules from a File
+void readSinopsis(); //Read the Sinopsis from a File
+void checkseating(); //Check Seating Status and Concacenate its Position into a String
 
 int main(int argc, char** argv)
 {
-   strcpy(seat[0].position,"A1");
+   strcpy(seat[0].position,"A1 ");
    seat[0].status = 0;
-   strcpy(seat[1].position,"A2");
+   strcpy(seat[1].position,"A2 ");
    seat[1].status = 0;
-   strcpy(seat[2].position,"B1");
+   strcpy(seat[2].position,"B1 ");
    seat[2].status = 0;
-   strcpy(seat[3].position,"B2");
+   strcpy(seat[3].position,"B2 ");
    seat[3].status = 0;
 
    readFilm();
@@ -213,7 +215,7 @@ void intseatwindow()
     return;
 }
 
-void intsummary()
+void intsummary(char seating[])
 {
     char tickets[4] = {0}, prices[20] = {0};
 
@@ -223,7 +225,7 @@ void intsummary()
     GtkWidget *g_label_summary_title;
     GtkWidget *g_label_summary_schedule;
     GtkWidget *g_label_summary_ticket;
-    //GtkWidget *g_label_summary_seating; (unfinished)
+    GtkWidget *g_label_summary_seating;
     GtkWidget *g_label_summary_price;
 
     g_label_summary_title = GTK_WIDGET(gtk_builder_get_object(builder,"label_summary_title"));
@@ -232,8 +234,8 @@ void intsummary()
     gtk_label_set_text(GTK_LABEL(g_label_summary_schedule), film[filmpil].jadwal[jadwalpil]);
     g_label_summary_ticket = GTK_WIDGET(gtk_builder_get_object(builder,"label_summary_ticket"));
     gtk_label_set_text(GTK_LABEL(g_label_summary_ticket), tickets);
-    //g_label_summary_seating = GTK_WIDGET(gtk_builder_get_object(builder,"label_summary_seating")); (unfinished)
-    //gtk_label_set_text(GTK_LABEL(g_label_summary_seating),seating); (unfinished)
+    g_label_summary_seating = GTK_WIDGET(gtk_builder_get_object(builder,"label_summary_seating"));
+    gtk_label_set_text(GTK_LABEL(g_label_summary_seating),seating);
     g_label_summary_price = GTK_WIDGET(gtk_builder_get_object(builder,"label_summary_price"));
     gtk_label_set_text(GTK_LABEL(g_label_summary_price),prices);
 
@@ -307,7 +309,8 @@ void on_schedule3_button_press_event()
 
 void on_button_continue_clicked()
 {
-    GtkToggleButton *toggle_button[4];
+
+    char seating[20] = {0};
 
     toggle_button[0] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A1"));
     toggle_button[1] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A2"));
@@ -320,20 +323,20 @@ void on_button_continue_clicked()
         else{seat[i].status = 0;}
     }
 
+
     gtk_widget_hide(window1);
     showtab(notebook,4);
     gtk_notebook_set_current_page(notebook,4);
     hidetab(notebook,0);
     hidetab(notebook,1);
-    hidetab(notebook,2);
     hidetab(notebook,3);
-    intsummary();
+    checkseating(seating);
+    intsummary(seating);
     return;
 }
 
 void on_button_cancel_clicked()
 {
-    GtkToggleButton *toggle_button[4];
     toggle_button[0] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A1"));
     toggle_button[1] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A2"));
     toggle_button[2] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_B1"));
@@ -350,15 +353,55 @@ void on_button_cancel_clicked()
 
 void on_button_summary_continue_clicked() //Incomplete
 {
-    window2 = GTK_WIDGET(gtk_builder_get_object(builder, "windowcomplete"));
-
-
+    window2 = GTK_WIDGET(gtk_builder_get_object(builder, "windowsuccess"));
+    gtk_widget_show(window2);
 }
 
 void on_button_summary_cancel_clicked() //Incomplete
 {
+    toggle_button[0] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A1"));
+    toggle_button[1] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A2"));
+    toggle_button[2] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_B1"));
+    toggle_button[3] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_B2"));
 
+    hidetab(notebook,4);
+    showtab(notebook,0);
+    showtab(notebook,1);
+    gtk_notebook_set_current_page(notebook,0);
 
+    ticket = 0;
+    filmpil = 0;
+    jadwalpil = 0;
+
+    for(i=0;i<4;i++)
+    {
+        gtk_toggle_button_set_active(toggle_button[i], FALSE);
+    }
+    return;
+}
+
+void on_button_success_clicked()
+{
+    toggle_button[0] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A1"));
+    toggle_button[1] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_A2"));
+    toggle_button[2] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_B1"));
+    toggle_button[3] = GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder, "toggle_B2"));
+
+    gtk_widget_hide(window2);
+    hidetab(notebook,4);
+    showtab(notebook,0);
+    showtab(notebook,1);
+    gtk_notebook_set_current_page(notebook,0);
+
+    ticket = 0;
+    filmpil = 0;
+    jadwalpil = 0;
+
+    for(i=0;i<4;i++)
+    {
+        gtk_toggle_button_set_active(toggle_button[i], FALSE);
+    }
+    return;
 }
 
 void on_tab_hide_check()
@@ -415,6 +458,18 @@ int price(int jumlah)
 			break;
 	}
 	return 0;
+}
+
+void checkseating(char seating[])
+{
+    for(i=0;i<4;i++)
+    {
+        switch(seat[i].status)
+        {
+            case 1 : strcat(seating,seat[i].position); break;
+        }
+    }
+    return;
 }
 
 GdkPixbuf *create_pixbuf(const gchar * filename)
