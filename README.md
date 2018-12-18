@@ -31,7 +31,7 @@ the lists are as follows :
 
 Future Plan for This Program 
 
-we "hope" to improve the program further since it hasn't met our expectations & we were faced with many difficulties when trying to reach realize this expectation. Planned improvement includes better seating layout, memories of previous transactions & seating, and simulations of "filled" seats. another idea is to combine the program with our other program (C-PHP Browser Ticketing) to be able to print a HTML based ticket on a browse. our last possible plan is to do nothing to it and let it be.
+We "hope" to improve the program further since it hasn't met our expectations & we were faced with many difficulties when trying to reach realize this expectation. Planned improvement includes better seating layout, memories of previous transactions & seating, and simulations of "filled" seats. another idea is to combine the program with our other program (C-PHP Browser Ticketing) to be able to print a HTML based ticket on a browse. our last possible plan is to do nothing to it and let it be.
 
 Thank you for reading this readme, we bid you a good day/night
 
