@@ -2,7 +2,7 @@
 
 BuyTickets is a rather simple & bodgy movie ticketing program based in C with GUI using Gtk+ library and compiled with MinGW-w64 Compiler
 
-Before we explain further we would like to apologize for there are still some (a lot) imperfections in this program and a lot of unreached expectations/target, thank you for the understanding
+Before we explain further we would like to apologize for there are still some (a lot) imperfections in this program and a lot of unreached expectations/target for that we thank you very much
 
 This Program's design is based on popular mobile ticketing apps such as m-tix, cgv, etc with features including a film list, schedules, sinopsis, seating layout, & summary.
 The Main objective of this program is to allow the user to easily purchase a ticket of a desired movie alone, which explains the usage of GUI instead of normal command window, this allows a more personal touch with the user on a whole new level.
