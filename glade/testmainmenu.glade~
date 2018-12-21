@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="windowmain">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Buy Tickets!</property>
+    <property name="resizable">False</property>
+    <property name="window_position">center</property>
+    <property name="default_width">400</property>
+    <property name="default_height">560</property>
+    <property name="icon">..\img\icon2.png</property>
+    <property name="gravity">center</property>
+    <signal name="destroy" handler="on_window_destroy" swapped="no"/>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="Back">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label_title">
+            <property name="width_request">142</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Buy Tickets</property>
+            <attributes>
+              <attribute name="style" value="oblique"/>
+              <attribute name="weight" value="semibold"/>
+              <attribute name="variant" value="normal"/>
+              <attribute name="scale" value="600"/>
+              <attribute name="size" value="40"/>
+              <attribute name="absolute-size" value="40"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label_author">
+            <property name="width_request">113</property>
+            <property name="height_request">20</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Hanif R. &amp; A. Aufar</property>
+          </object>
+          <packing>
+            <property name="x">16</property>
+            <property name="y">24</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage" id="img_titledecor">
+            <property name="width_request">270</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixbuf">..\img\roll.png</property>
+          </object>
+          <packing>
+            <property name="x">148</property>
+            <property name="y">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkNotebook" id="Menu">
+            <property name="width_request">400</property>
+            <property name="height_request">533</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="show_border">False</property>
+            <signal name="switch-page" handler="on_tab_hide_check" swapped="no"/>
+            <child>
+              <object class="GtkFixed" id="Film">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkEventBox" id="film0">
+                    <property name="width_request">150</property>
+                    <property name="height_request">218</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_film0_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkImage" id="img_film0">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">33</property>
+                    <property name="y">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="film1">
+                    <property name="width_request">150</property>
+                    <property name="height_request">218</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_film1_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkImage" id="img_film1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">239</property>
+                    <property name="y">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="film2">
+                    <property name="width_request">150</property>
+                    <property name="height_request">218</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_film2_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkImage" id="img_film2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">35</property>
+                    <property name="y">249</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="film3">
+                    <property name="width_request">150</property>
+                    <property name="height_request">218</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_film3_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkImage" id="img_film3">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">239</property>
+                    <property name="y">248</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_film0">
+                    <property name="width_request">113</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Film 1</property>
+                    <property name="justify">center</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">52</property>
+                    <property name="y">224</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_film1">
+                    <property name="width_request">113</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Film 2</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">259</property>
+                    <property name="y">224</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_film2">
+                    <property name="width_request">113</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Film 3</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">53</property>
+                    <property name="y">467</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_film3">
+                    <property name="width_request">113</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Film 4</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">260</property>
+                    <property name="y">466</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label_tab_film">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Film</property>
+              </object>
+              <packing>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="Schedule">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="label_title_film0">
+                    <property name="width_request">10</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">...</property>
+                    <attributes>
+                      <attribute name="style" value="italic"/>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="500"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">14</property>
+                    <property name="y">14</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_title_film1">
+                    <property name="width_request">10</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">...</property>
+                    <attributes>
+                      <attribute name="style" value="italic"/>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="500"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">15</property>
+                    <property name="y">126</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_title_film2">
+                    <property name="width_request">10</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">...</property>
+                    <attributes>
+                      <attribute name="style" value="italic"/>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="500"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">15</property>
+                    <property name="y">238</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_title_film3">
+                    <property name="width_request">10</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">...</property>
+                    <attributes>
+                      <attribute name="style" value="italic"/>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="500"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">15</property>
+                    <property name="y">350</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_schedule_film0">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">[XX:XX]</property>
+                    <attributes>
+                      <attribute name="weight" value="semibold"/>
+                      <attribute name="scale" value="400"/>
+                      <attribute name="foreground" value="#88888a8a8585"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">38</property>
+                    <property name="y">54</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_schedule_film1">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">[XX:XX]</property>
+                    <attributes>
+                      <attribute name="weight" value="semibold"/>
+                      <attribute name="scale" value="400"/>
+                      <attribute name="foreground" value="#88888a8a8585"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">38</property>
+                    <property name="y">166</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_schedule_film2">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">[XX:XX]</property>
+                    <attributes>
+                      <attribute name="weight" value="semibold"/>
+                      <attribute name="scale" value="400"/>
+                      <attribute name="foreground" value="#88888a8a8585"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">38</property>
+                    <property name="y">278</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_schedule_film3">
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">[XX:XX]</property>
+                    <attributes>
+                      <attribute name="weight" value="semibold"/>
+                      <attribute name="scale" value="400"/>
+                      <attribute name="foreground" value="#88888a8a8585"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">38</property>
+                    <property name="y">390</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label_tab_schedule">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Schedule</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="About">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="label_title_ultimate">
+                    <property name="width_request">391</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">THE ULTIMATE TICKETING
+PROGRAM</property>
+                    <property name="justify">center</property>
+                    <attributes>
+                      <attribute name="weight" value="ultraheavy"/>
+                      <attribute name="scale" value="400"/>
+                      <attribute name="underline" value="True"/>
+                      <attribute name="size" value="40"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">14</property>
+                    <property name="y">40</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_info_1">
+                    <property name="width_request">398</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Program ini adalah sebuah program ticketing sederhana
+yang berbasis C dan menggunakan GUI Library Gtk+ 3.0
+
+Program ini dapat memudahkan anda dalam melakukan
+pembelian tiket film secara mandiri tanpa adanya kasir
+dan dapat mempercepat proses pembelian 30%
+
+Alur penggunaan program</property>
+                    <property name="justify">center</property>
+                  </object>
+                  <packing>
+                    <property name="x">7</property>
+                    <property name="y">105</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_info_2">
+                    <property name="width_request">421</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Pilih Film -&gt; Pilih Jadwal -&gt; Pilih Kursi -&gt; Summary</property>
+                    <property name="justify">center</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="scale" value="700"/>
+                      <attribute name="size" value="15"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="y">207</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage" id="img_duck">
+                    <property name="width_request">126</property>
+                    <property name="height_request">119</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="pixbuf">..\img\duck.png</property>
+                  </object>
+                  <packing>
+                    <property name="x">141</property>
+                    <property name="y">267</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="width_request">224</property>
+                    <property name="height_request">32</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Hanif Rachmadani &amp; Ahmad Aufar Hus.
+1606870774 - 1606904730
+
+Jakarta 11 Desember 2018
+Proyek Akhir Algoritma &amp; Pemrograman</property>
+                    <property name="justify">center</property>
+                  </object>
+                  <packing>
+                    <property name="x">92</property>
+                    <property name="y">391</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label_tab_about">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">About</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="Sinopsis">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkImage" id="img_film_poster">
+                    <property name="width_request">200</property>
+                    <property name="height_request">292</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="stock">gtk-missing-image</property>
+                  </object>
+                  <packing>
+                    <property name="x">111</property>
+                    <property name="y">51</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_film_sinopsis0">
+                    <property name="width_request">421</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Sinopsis0</property>
+                    <property name="justify">center</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="y">375</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_film_sinopsis1">
+                    <property name="width_request">421</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Sinopsis1</property>
+                    <property name="justify">center</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="y">390</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_schedule">
+                    <property name="width_request">62</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Schedule :</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">38</property>
+                    <property name="y">410</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_sinopsis">
+                    <property name="width_request">76</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Sinopsis : </property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">38</property>
+                    <property name="y">348</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_film_title">
+                    <property name="width_request">200</property>
+                    <property name="height_request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">title</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="400"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">111</property>
+                    <property name="y">31</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="schedule0">
+                    <property name="width_request">70</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_schedule0_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkLabel" id="label_film_schedule0">
+                        <property name="width_request">70</property>
+                        <property name="height_request">22</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">[XX.XX]</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                          <attribute name="scale" value="350"/>
+                          <attribute name="size" value="30"/>
+                        </attributes>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">65</property>
+                    <property name="y">441</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="schedule1">
+                    <property name="width_request">70</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_schedule1_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkLabel" id="label_film_schedule1">
+                        <property name="width_request">70</property>
+                        <property name="height_request">22</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">[XX.XX]</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                          <attribute name="scale" value="350"/>
+                          <attribute name="size" value="30"/>
+                        </attributes>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">140</property>
+                    <property name="y">441</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="schedule2">
+                    <property name="width_request">70</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_schedule2_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkLabel" id="label_film_schedule2">
+                        <property name="width_request">70</property>
+                        <property name="height_request">22</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">[XX.XX]</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                          <attribute name="scale" value="350"/>
+                          <attribute name="size" value="30"/>
+                        </attributes>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">215</property>
+                    <property name="y">441</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkEventBox" id="schedule3">
+                    <property name="width_request">70</property>
+                    <property name="height_request">22</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <signal name="button-press-event" handler="on_schedule3_button_press_event" swapped="no"/>
+                    <child>
+                      <object class="GtkLabel" id="label_film_schedule3">
+                        <property name="width_request">70</property>
+                        <property name="height_request">22</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">[XX.XX]</property>
+                        <attributes>
+                          <attribute name="weight" value="bold"/>
+                          <attribute name="scale" value="350"/>
+                          <attribute name="size" value="30"/>
+                        </attributes>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="x">290</property>
+                    <property name="y">441</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label_tab_sinopsis">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Sinopsis</property>
+              </object>
+              <packing>
+                <property name="position">3</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="Summary">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="label_title ">
+                    <property name="width_request">183</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Title                                    :</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">34</property>
+                    <property name="y">51</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_schedule ">
+                    <property name="width_request">100</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Schedule                           :</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">35</property>
+                    <property name="y">87</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_ticket">
+                    <property name="width_request">100</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Number of Tickets          :</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">35</property>
+                    <property name="y">123</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_seating">
+                    <property name="width_request">182</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Seatings                            :</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">34</property>
+                    <property name="y">159</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary_title">
+                    <property name="width_request">10</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">XXX</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">230</property>
+                    <property name="y">53</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary_schedule">
+                    <property name="width_request">47</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">[xx:xx]</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">230</property>
+                    <property name="y">88</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary_ticket">
+                    <property name="width_request">20</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="justify">center</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">230</property>
+                    <property name="y">125</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_price">
+                    <property name="width_request">182</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Total Price                        :</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">34</property>
+                    <property name="y">195</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary_price">
+                    <property name="width_request">30</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">XX</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">230</property>
+                    <property name="y">197</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary">
+                    <property name="width_request">100</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Transaction Summary</property>
+                    <attributes>
+                      <attribute name="weight" value="bold"/>
+                      <attribute name="variant" value="normal"/>
+                      <attribute name="scale" value="375"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">22</property>
+                    <property name="y">16</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary_info">
+                    <property name="width_request">342</property>
+                    <property name="height_request">100</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">please make sure the informations stated above are correct
+
+any tickets bought are ineligible for refund nor trade
+
+to proceed with the transaction, please click 'continue'</property>
+                    <property name="justify">center</property>
+                  </object>
+                  <packing>
+                    <property name="x">42</property>
+                    <property name="y">241</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button_summary_continue">
+                    <property name="label" translatable="yes">Continue</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="on_button_summary_continue_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">253</property>
+                    <property name="y">374</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button_summary_cancel">
+                    <property name="label" translatable="yes">Cancel</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">40</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <signal name="clicked" handler="on_button_summary_cancel_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">60</property>
+                    <property name="y">374</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_summary_seating">
+                    <property name="width_request">30</property>
+                    <property name="height_request">30</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">[Not Yet Finished]</property>
+                    <attributes>
+                      <attribute name="scale" value="350"/>
+                      <attribute name="size" value="30"/>
+                    </attributes>
+                  </object>
+                  <packing>
+                    <property name="x">230</property>
+                    <property name="y">161</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label_tab_summary">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Summary</property>
+              </object>
+              <packing>
+                <property name="position">4</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="y">47</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="windowseat">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Seating!</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="default_width">400</property>
+    <property name="default_height">300</property>
+    <property name="icon">..\img\icon2.png</property>
+    <property name="gravity">center</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="Seating">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkToggleButton" id="toggle_A1">
+            <property name="label" translatable="yes">A1</property>
+            <property name="width_request">100</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="image_position">bottom</property>
+          </object>
+          <packing>
+            <property name="x">81</property>
+            <property name="y">24</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="toggle_A2">
+            <property name="label" translatable="yes">A2</property>
+            <property name="width_request">105</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">216</property>
+            <property name="y">24</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="toggle_B1">
+            <property name="label" translatable="yes">B1</property>
+            <property name="width_request">105</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">79</property>
+            <property name="y">130</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="toggle_B2">
+            <property name="label" translatable="yes">B2</property>
+            <property name="width_request">105</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">217</property>
+            <property name="y">128</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_continue">
+            <property name="label" translatable="yes">Continue</property>
+            <property name="width_request">100</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_button_continue_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">83</property>
+            <property name="y">241</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_cancel">
+            <property name="label" translatable="yes">Cancel</property>
+            <property name="width_request">100</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_button_cancel_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">221</property>
+            <property name="y">240</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="windowsuccess">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Success!</property>
+    <property name="modal">True</property>
+    <property name="window_position">center</property>
+    <property name="default_width">200</property>
+    <property name="default_height">120</property>
+    <property name="icon">..\img\icon2.png</property>
+    <property name="type_hint">dialog</property>
+    <property name="gravity">center</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="Success">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="label_success">
+            <property name="width_request">142</property>
+            <property name="height_request">40</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Transaction Success!!
+Happy Watching</property>
+            <property name="justify">center</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">29</property>
+            <property name="y">15</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_success">
+            <property name="label" translatable="yes">Continue</property>
+            <property name="width_request">84</property>
+            <property name="height_request">34</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_button_success_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">58</property>
+            <property name="y">65</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
