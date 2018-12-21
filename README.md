@@ -30,16 +30,16 @@ the lists are as follows :
 - Changeable Poster, Film Titles, Schedules, & Sinpopsys
 
 The Source Codes are split into 3 files : main.c signals.c & misc.c ; all located inside the source folder
--main.c contains the main function & initalizers
--signals.c contains callback functions
--misc.c contains miscellanous functions & tools
+- main.c contains the main function & initalizers
+- signals.c contains callback functions
+- misc.c contains miscellanous functions & tools
 These 3 Files are compiled using a custom makefile located inside the root folder
 
 There's 5 subfolders (beside library dependecies) that are critical to this program :
--img contains image used by the program
--glade contains the glade xml file necessary for the program to run
--out contains compiled source files before built into one executable file
--source contains the source codes, divided into 3 files, explained above
+- img contains image used by the program
+- glade contains the glade xml file necessary for the program to run
+- out contains compiled source files before built into one executable file
+- source contains the source codes, divided into 3 files, explained above
 
 Future Plan for This Program 
 
