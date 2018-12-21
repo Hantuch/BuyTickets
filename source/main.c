@@ -3,10 +3,12 @@
 #include <conio.h>
 #include <string.h>
 
+//Kelompok 13
 //Hanif Rachmadani - 1606870774
 //Ahmad Aufar Husaini - 1606904730
 
 //Buy Tickets! - Improved Ticketing App with Gtk GUI - 18/12/18
+//Link Github : https://github.com/Hantuch/BuyTickets
 
 //Codes are divided into 3 source code files - main.c signals.c & misc.c
 
